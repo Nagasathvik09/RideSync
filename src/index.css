@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary:        #4DA8FF;
+  --primary-strong: #2B8CEB;
+  --primary-soft:   #E8F3FF;
+  --primary-wash:   #F5FAFF;
+  --surface:        #FFFFFF;
+  --text:           #0F1B2D;
+  --text-muted:     #5B6B80;
+  --border:         #E3ECF5;
+  --success:        #22B07D;
+  --warning:        #F5A524;
+  --danger:         #E5484D;
+  --women-only:     #B084F5;
+  --women-only-bg:  #F3ECFF;
+}
+
+@layer base {
+  body {
+    background-color: #F5FAFF;
+    color: #0F1B2D;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.011em;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Accessible focus ring */
+  *:focus-visible {
+    outline: 2px solid #2B8CEB;
+    outline-offset: 2px;
+  }
+}
+
+/* Vertical dotted timeline connector */
+.route-timeline-dotted {
+  width: 2px;
+  background-image: linear-gradient(to bottom, #4DA8FF 50%, rgba(255, 255, 255, 0) 0%);
+  background-position: left;
+  background-size: 2px 8px;
+  background-repeat: repeat-y;
+}
+
+/* Skeleton loader shimmer animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #E8F3FF 25%, #F8FAFC 50%, #E8F3FF 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E3ECF5;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4DA8FF;
+}
+
+/* Leaflet light map styles */
+.leaflet-container {
+  font-family: inherit;
+  background: #F5FAFF !important;
+}
+
+.custom-leaflet-icon {
+  background: transparent;
+  border: none;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #FFFFFF !important;
+  color: #0F1B2D !important;
+  border: 1px solid #E3ECF5 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px rgba(43, 140, 235, 0.10) !important;
+}
+
+.leaflet-popup-tip {
+  background: #FFFFFF !important;
+}
+
+.leaflet-popup-content {
+  margin: 10px 14px !important;
+  line-height: 1.4 !important;
+}
+
+/* Mobile safe area padding */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}

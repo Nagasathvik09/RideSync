@@ -159,8 +159,8 @@ export const MapView: React.FC<MapViewProps> = (props) => {
         style={{ height: '100%', width: '100%', background: '#F5FAFF' }}
       >
         <TileLayer
-          attribution='&copy; <a href="https://carto.com/">CARTO</a> | &copy; OpenStreetMap'
-          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           maxZoom={19}
         />
 
